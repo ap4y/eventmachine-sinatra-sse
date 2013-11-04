@@ -1,0 +1,9 @@
+<article id="log"></article>
+
+<script>
+  var source = new EventSource('/stream/channel_1');
+
+  source.addEventListener('message', function (event) {
+    log.innerText += '\n' + event.data;
+  }, false);
+</script>
